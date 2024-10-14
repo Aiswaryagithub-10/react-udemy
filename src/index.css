@@ -1,13 +1,248 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body
+ {
+    font-family: "Gabarito", sans-serif;
+}
+*
+{
+    margin: 0px;
+    padding: 0px;
+}   
+.nb
+{
+    padding: 2px;
+    display: flex;
+    justify-content:space-evenly;
+    border-bottom: solid 1px black;
+    gap: 10px;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: whitesmoke;
+    z-index: 2;
+}
+.unwanted{
+    gap: 30px;
+    display:flex;
+    align-items: center;
+}
+.icon
+{
+    justify-content:space-evenly;
+}
+.nb__one
+{
+    color: #A436F0;
+    font-size: 25px;
+}
+.nb__two
+{
+    padding: 10px;
+    border: solid black 2px;
+    border-radius: 30px;
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.nb__two input
+{
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+
+}
+.nb__two input:focus
+{
+    outline: none;
+}
+.nb__three
+{
+display: flex;
+gap: 40px;
+align-items: center;
+}
+.nb__four
+{
+    display: none;
+}
+.mylearn
+{
+    cursor: pointer;
+    position: relative;
+}
+.mylearn:hover .mylearn__emp
+{
+display: block;
+}
+.mylearn__emp
+{
+    position: absolute;
+    background-color: black;
+    color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+    top: 40px;
+    right:3px ;
+    width: 207px;
+    display: none;
+}
+.categories
+{
+    display: flex;
+    padding: 2px;
+    margin: 10px;
+    justify-content: space-around;
+    border-bottom: solid 1px black;
+}
+.categories p
+{
+    background-color:#A436F0;
+    color: rgb(29, 18, 18);
+    border-radius: 15px;
+    padding: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+.categories p:hover {
+    background-color: #bfa4e7;
+    color: rgb(35, 13, 49);
+    transition: transform 0.3s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.sale img
+{
+    height:500px;
+    width: 100%;
+    position: relative;
+    }
+.off
+{
+    position: absolute;
+    background-color: white;
+    top: 40%; /* Make it centered vertically */
+    left: 60%; /* Make it centered horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect center */
+    padding: 55px;
+    padding-top: 3px;
+    border: solid black 2px;
+    border-radius: 8px;
+    z-index: 1;
+    text-align: center;
+    width: 10%; /* Responsive width */
+    height: 20%;
+    animation: Zoom 5s 1s infinite;
 }
+@keyframes Zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+                   }
+          100%{
+            transform: scale(1);
+            opacity: 1;
+          }         
+}
+
+.recommended{
+    padding: 10px;
+}
+.recommendedcontainer
+{
+display: flex;
+justify-content: space-around;
+margin-top: 15px;
+flex-wrap: wrap;
+}
+.courses__card img
+{
+width: 100%;
+height: 50%;
+}
+.courses__card
+{
+flex-grow: 1;
+flex-basis:20%;
+margin: 5px;
+}
+.topics{
+    padding: 10px;
+}
+.topics__container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap:10px;
+    text-align: center;
+    
+}
+.topics__container p{
+    border: solid gray 2px;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+    
+}
+
+.popular{
+    padding: 10px;
+}
+
+.popularcontainer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.footer{
+    padding: 30px;
+    background-color: black;
+    color: white;
+   
+}
+.footer__one{
+    display: flex;
+    }
+.footer__one p{
+    margin: 20px;
+}
+.footer__two{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+ 
+/* media queries */
+@media screen and (max-width:800px) {
+    body{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:600px) {
+    
+ .courses__card       {flex-basis: 40%;
+    }
+ 
+    .categories{
+        font-size: smaller    ;
+    }
+    .nb{
+        gap: 0px;
+    }
+    .nb__three{
+        gap: 10px;
+    }
+    .nb__four{
+        display:block;
+    }
+    .unwanted{
+        display: none;
+    }
+    .off{
+    font-size: 12px;
+    padding: 3px;
+    width: 220px;
+    height: 60px;
+    }
+    }
+    
